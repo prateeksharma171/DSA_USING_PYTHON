@@ -84,7 +84,7 @@ print(rotateLeft(values, 8)) """
 
 """ Que: 4 """
 
-def moveZeroToEnd(values):
+""" def moveZeroToEnd(values):
 
     left=0
 
@@ -96,4 +96,44 @@ def moveZeroToEnd(values):
 
 values = [0,0,0,1,2,4,4]
 
-print(moveZeroToEnd(values))
+print(moveZeroToEnd(values)) """
+
+""" Que: 5 """
+
+""" def maxSubArray(values):
+
+    current_sum = values[0]
+    max_sum = values[0]
+
+    for val in range(1, len(values)):
+        current_sum=max(values[val],current_sum + values[val])
+        max_sum=max(max_sum,current_sum)
+
+    return max_sum
+
+
+values=[-2,1,-3,4,-1,2,1,-5,4]
+
+print(maxSubArray(values)) """
+
+
+""" Que: 6 """
+
+""" def targetSumEqual(values,target):
+    values=sorted(values)
+    left=0
+    right=len(values)-1
+
+    while left < right:
+        sum= values[left] + values[right]
+        if sum== target:
+           return True
+        elif sum > target:
+            right-=1
+        else:
+            left+=1
+    return False
+
+values=[2,1,5,4]
+
+print(targetSumEqual(values,7)) """
